@@ -2045,7 +2045,7 @@ begin
     stInt: Result := (FO.c_int <> 0);
     stDouble: Result := (FO.c_double <> 0);
     stCurrency: Result := (FO.c_currency <> 0);
-    stString: Result := (Length(FOString) <> 0);
+    stString: Result := (FOString = '1') or (UpperCase(FOString) = 'TRUE');
     stNull: Result := False;
   else
     Result := True;
